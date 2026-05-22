@@ -1,0 +1,161 @@
+export default function MikesMaintenanceWebsite() {
+  const services = [
+    {
+      title: "Lawn Care",
+      description:
+        "Keep your lawn clean, trimmed, and well maintained with reliable grass cutting and yard upkeep services.",
+    },
+    {
+      title: "Yard Cleanup",
+      description:
+        "Seasonal cleanups, leaf removal, debris clearing, and general outdoor cleanup to keep your property looking its best.",
+    },
+    {
+      title: "Garbage Bin Cleaning",
+      description:
+        "Deep cleaning, sanitization and bug proofing for outdoor garbage, recyling and compost.",
+    },
+    {
+      title: "Pressure Washing",
+      description:
+        "Pressure washing services for driveways, patios, walkways, siding, decks, and other outdoor surfaces.",
+    },
+    {
+      title: "Gutter Cleaning",
+      description:
+        "Removal of leaves and debris from gutters to help prevent overflow and water damage around your home.",
+    },
+    {
+      title: "Fence & Deck Work",
+      description:
+        "General fence and deck repairs, maintenance, staining, and improvement work for outdoor spaces.",
+    },
+    {
+      title: "Gardening Help",
+      description:
+        "Help with planting, weeding, soil work, garden cleanup, and maintaining healthy outdoor garden areas.",
+    },
+  ];
+
+  return (
+    <div className="min-h-screen bg-white text-gray-900 font-sans">
+      {/* Hero Section */}
+      <section className="bg-green-700 text-white py-20 px-6 text-center">
+        <div className="max-w-4xl mx-auto">
+          <h1 className="text-5xl md:text-6xl font-bold mb-4 tracking-tight">
+            Mike&apos;s Maintenance
+          </h1>
+
+          <p className="text-xl md:text-2xl text-green-100 mb-8">
+            Reliable Property Maintenance & Outdoor Services
+          </p>
+
+          <div className="flex flex-col sm:flex-row justify-center gap-4">
+            <a
+              href="#contact"
+              className="bg-white text-green-700 px-6 py-3 rounded-2xl font-semibold shadow-lg hover:scale-105 transition inline-block"
+            >
+              Get a Free Quote
+            </a>
+
+            <a
+              href="#contact"
+              className="border border-white px-6 py-3 rounded-2xl font-semibold hover:bg-white hover:text-green-700 transition inline-block"
+            >
+              Call Today
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* About Section */}
+      <section className="py-16 px-6">
+        <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-10 items-center">
+          <div>
+            <h2 className="text-3xl font-bold mb-4">
+              About Mike&apos;s Maintenance
+            </h2>
+
+            <p className="text-lg text-gray-700 leading-relaxed">
+              Mike&apos;s Maintenance provides dependable outdoor and property
+              maintenance services for homeowners looking to keep their
+              properties clean, maintained, and looking their best.
+            </p>
+
+            <p className="text-lg text-gray-700 leading-relaxed mt-4">
+              Whether you need regular lawn care, seasonal cleanup, pressure
+              washing, or help around the yard, we offer hardworking service at
+              affordable prices.
+            </p>
+          </div>
+
+          <div className="bg-gray-100 rounded-3xl p-8 shadow-md">
+            <h3 className="text-2xl font-semibold mb-6 text-center">
+              Why Choose Us?
+            </h3>
+
+            <ul className="space-y-4 text-lg text-gray-700">
+              <li>✔ Reliable & hardworking</li>
+              <li>✔ Affordable pricing</li>
+              <li>✔ Flexible scheduling</li>
+              <li>✔ One-time or ongoing service</li>
+              <li>✔ Friendly local service</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      {/* Services */}
+      <section className="bg-gray-50 py-16 px-6">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-4xl font-bold text-center mb-12">
+            Our Services
+          </h2>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {services.map((service) => (
+              <div
+                key={service.title}
+                className="bg-white rounded-3xl shadow-md p-8 hover:shadow-xl transition"
+              >
+                <h3 className="text-2xl font-semibold mb-3">
+                  {service.title}
+                </h3>
+
+                <p className="text-gray-600 leading-relaxed">
+                  {service.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Contact */}
+      <section
+        id="contact"
+        className="py-20 px-6 bg-green-700 text-white text-center"
+      >
+        <div className="max-w-3xl mx-auto">
+          <h2 className="text-4xl font-bold mb-6">Get a Free Quote</h2>
+
+          <p className="text-xl text-green-100 mb-8">
+            Contact Mike&apos;s Maintenance today for reliable outdoor and
+            property maintenance services.
+          </p>
+
+          <div className="space-y-4 text-lg">
+            <p>📞 Phone: (416) 838-9264</p>
+            <p>✉ Email: michaelolearczyk@gmail.com</p>
+            <p>📍 Serving Local Residential Properties</p>
+          </div>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="bg-gray-900 text-gray-400 py-6 text-center text-sm">
+        © 2026 Mike&apos;s Maintenance. All rights reserved.
+      </footer>
+    </div>
+  );
+}
